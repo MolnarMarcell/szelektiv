@@ -8,6 +8,56 @@
 </head>
 <body>
     
+    <header>
+        <h1>Selektív Hulladék Játék</h1>
+    </header>
+
+    <main id="gameArea">
+        <section id="bins" aria-label="Kukák">
+            <div class="bin" data-type="paper">
+                <div class="bin-top"></div>
+                <div class="bin-body">
+                    <div class="bin-label">Papír</div>
+                    <div class="count">0</div>
+                </div>
+            </div>
+
+            <div class="bin" data-type="plastic">
+                <div class="bin-top"></div>
+                <div class="bin-body">
+                    <div class="bin-label">Műanyag</div>
+                    <div class="count">0</div>
+                </div>
+            </div>
+
+            <div class="bin" data-type="metal">
+                <div class="bin-top"></div>
+                <div class="bin-body">
+                    <div class="bin-label">Fém</div>
+                    <div class="count">0</div>
+                </div>
+            </div>
+
+            <div class="bin" data-type="mixed">
+                <div class="bin-top"></div>
+                <div class="bin-body">
+                    <div class="bin-label">Vegyes</div>
+                    <div class="count">0</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="playArea" aria-label="Játéktér">
+            <div id="trash" draggable="true">Hulladék (húzd ide)</div>
+        </section>
+
+        <aside id="info">
+            <div>Pontszám: <span id="score">0</span></div>
+            <div>Hibák száma: <span id="errors">0</span></div>
+            <div>Idő: <span id="time">00:00</span></div>
+        </aside>
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>
