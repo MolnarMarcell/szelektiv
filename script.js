@@ -10,31 +10,39 @@ let ido = 50;
 //-----------------------------------------------------------------
 
 
-
-const pontszamDiv = document.createElement("div");
-pontszamDiv.id = "pontszam";
-pontszamDiv.textContent = "Pontszám: 0";
-document.body.appendChild(pontszamDiv);
-
 function pontnoveles() {
     pontszam++;
-    pontszamDiv.textContent = "Pontszám: " + pontszam;
+    document.getElementById("score").textContent = pontszam;
 }
 
 function idovisszaszamlalo() {
-    const szamlalo = document.getElementById("szamlalo");
+    const time = document.getElementById("time");
     const interval = setInterval(() => {
-        szamlalo.textContent = ido;
+        time.textContent = `${ido}`;
         ido--;
         if (ido < 0) {
             clearInterval(interval);
-            szamlalo.textContent = "Idő lejárt!";
+            time.textContent = "Idő lejárt!";
         }
     }, 1000);
 }
 
-let szamlalo = document.createElement("div");
-szamlalo.id = "szamlalo";
-document.body.appendChild(szamlalo);
+function blokkgeneralas() {
+    const container = document.getElementById("trash");
+    const block = document.createElement("div");
+    block.classList.add("block");
+    block.style.left = `${Math.random() * 90}%`;
+    block.style.top = `${Math.random() * 90}%`;
+    block.addEventListener("click", () => {
+        pontnoveles();
+        block.remove();
+    });
+    container.appendChild(block);
+}
+
+blockgeneralas();
+
+
+
 
 idovisszaszamlalo();

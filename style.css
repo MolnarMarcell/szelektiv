@@ -7,7 +7,7 @@ body{font-family:Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
     color:#1a202c}
 
     header h1{margin:0 0 16px 0;
-    ont-size:22px;
+    font-size:22px;
     text-align:center}
 
 
@@ -96,3 +96,10 @@ body{font-family:Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
 {#gameArea{flex-direction:column}
 #bins{overflow-x:auto;justify-content:center}
 #info{min-width:100%}}
+
+.block {
+    width: 40px;
+    height: 40px;
+    background-color: #4a5568;
+    border-radius: 4px;
+}
