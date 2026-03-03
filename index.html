@@ -9,7 +9,8 @@
 <body>
     
     <header>
-        <h1>Selektív Hulladék Játék</h1>
+        <h1>♻️ Szelektív hulladékgyűjtés</h1>
+        <div id="topInfo">Pontszám: <span id="score">0</span> &nbsp;|&nbsp; Idő: <span id="time">50</span></div>
     </header>
 
     <main id="gameArea">
@@ -51,12 +52,9 @@
             <div id="trash" draggable="true">Hulladék (húzd ide)</div>
         </section>
 
-        <aside id="info">
-            <div>Pontszám: <span id="score">0</span></div>
-            <div>Hibák száma: <span id="errors">0</span></div>
-            <div>Idő: <span id="time">00:00</span></div>
-        </aside>
+        <!-- right-hand info removed to match screenshot; errors shown below -->
     </main>
+    <div id="bottomInfo"><div>Hibák: <span id="errors">0</span></div></div>
 
     <script src="script.js"></script>
 </body>
